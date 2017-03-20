@@ -1,4 +1,6 @@
 # Printer_AS
+AndroidStudio引用需在build.gradle添加compile 'com.speedata:deivice:1.4.3'
+
 readme\Documents\doc_cn\index.html 里面有打印方法的中文说明
 
 readme\Documents\doc_en\index.html 里面有打印方法的英文说明

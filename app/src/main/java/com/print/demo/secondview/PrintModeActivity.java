@@ -174,7 +174,13 @@ public class PrintModeActivity extends Activity implements OnClickListener {
 					new byte[] { 0x0a }, 1);
 		}
 	}
-
+	@Override
+	protected void onPause() {
+		super.onPause();
+		if (timer!=null){
+			stopTest();
+		}
+	}
 	private void stopTest() {
 		timer.cancel();
 		timer = null;
@@ -221,8 +227,12 @@ public class PrintModeActivity extends Activity implements OnClickListener {
 		// TODO Auto-generated method stub
 
 		// 先finishConnectActivity
-		ConnectAvtivity.mActivity.finish();
-		finish();
+		try {
+			ConnectAvtivity.mActivity.finish();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		PrintModeActivity.this.finish();
 	}
 
 	// 点击选择
