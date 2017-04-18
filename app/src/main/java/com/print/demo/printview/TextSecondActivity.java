@@ -1,6 +1,5 @@
 package com.print.demo.printview;
 
-import android.app.Activity;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -19,10 +18,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.print.demo.R;
+import com.print.demo.firstview.BaseActivity;
 
 import utils.ApplicationContext;
 
-public class TextSecondActivity extends Activity {
+public class TextSecondActivity extends BaseActivity {
 	public RadioButton barcode;
 	public RadioButton QRcode;
 	public Button barPrint;
@@ -180,6 +180,7 @@ public class TextSecondActivity extends Activity {
                     qrcHir);
             System.out.println("===============1:"+wide+"  2:"+hight+"  3:"+qrcHir);
         }
+		context.getObject().ASCII_CtrlFeedLines(context.getState(),3);
 		context.getObject().CON_PageEnd(context.getState(),
                 context.getPrintway());
 	}

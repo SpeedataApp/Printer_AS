@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">PrintApp1.0.3</string>
-  <!-- Toast提示 -->
-  <string name="null_wight_hight">Width or height can not be empty</string>
-  <string name="null_barversion_barerr_barsize">There are empty, please input</string>
-  <string name="max_hight_255">The height can not exceed 255</string>
-  <string name="max_qrchir_6">Magnification can only be 1 to 6</string>
-  <string name="null_zoom">Zoom can not be empty</string>
-  <string name="wrong_version">wrong version</string>
-  <string name="gary_value_large">Value is too large</string>
-  <string name="gary_set_ok">set ok</string>
-  <string name="gary_null_input">please input gray level</string>
-  
-  <!-- connect页面 -->
+    <string name="app_name">PrintApp1.0.3</string>
+    <!-- Toast提示 -->
+    <string name="null_wight_hight">Width or height can not be empty</string>
+    <string name="null_barversion_barerr_barsize">There are empty, please input</string>
+    <string name="max_hight_255">The height can not exceed 255</string>
+    <string name="max_qrchir_6">Magnification can only be 1 to 6</string>
+    <string name="null_zoom">Zoom can not be empty</string>
+    <string name="wrong_version">wrong version</string>
+    <string name="gary_value_large">Value is too large</string>
+    <string name="gary_set_ok">set ok</string>
+    <string name="gary_null_input">please input gray level</string>
+
+    <!-- connect页面 -->
     <string name="text_type">Printer Name</string>
     <string name="text_porttype">Port Type</string>
     <string name="text_printway">Transport Mode </string>
@@ -36,7 +36,7 @@
     <string name="dialog_remind_input_line">Please enter the feeding lines</string>
     <string name="dialog_sure">Sure</string>
     <string name="dialog_cancel">Cancel</string>
-    
+
     <string name="exit_dialog_title">Exit?</string>
     <string name="exit_dialog_message">Determine exit?</string>
     <string name="exit_dialog_neutral_button_text">Settings</string>
@@ -44,14 +44,13 @@
     <string name="exit_dialog_positive_button_text">Cancel</string>
     <string name="btnteston_text">Stop Test</string>
     <string name="btntestoff_text">Start Test</string>
-    
-    
-    
+
+
     <string name="mes_noeg">This print is not label printer or its not support this printer type currently</string>
     <!-- general页面 -->
     <string name="editText1">x</string>
     <string name="editText2">y</string>
-     <string name="autoCompleteText_text">0006\r\n84339216\r\nB—M2908\r\n215549\r\n2015—02—28\r\n10:40—10:47\r\n2.30\r\n2.6\r\n00:02:29\r\n0\r\n￥13.00\r\n￥0.00\r\n￥0.00\r\n￥13.00\r\n</string>
+    <string name="autoCompleteText_text">0006\r\n84339216\r\nB—M2908\r\n215549\r\n2015—02—28\r\n10:40—10:47\r\n2.30\r\n2.6\r\n00:02:29\r\n0\r\n￥13.00\r\n￥0.00\r\n￥0.00\r\n￥13.00\r\n</string>
     <string name="textView_3">Width</string>
     <string name="textView_4">Hight</string>
     <string name="checkBox01">Width</string>
@@ -65,11 +64,11 @@
     <string name="radio1">Center</string>
     <string name="radio2">Right</string>
     <string name="button_printtext">   Print    </string>
-     <string name="button_state">Printer Status</string>
+    <string name="button_state">Printer Status</string>
     <string name="mes_stateOK">The printer status:Normal state</string>
     <string name="mes_statePE">The printer status:No Paper</string>
     <string name="mes_stateNet">The printer status:Network Errors</string>
-    
+
     <!-- barcode页面 -->
     <string name="barcode">Barcode</string>
     <string name="QRcode">QRcode</string>
@@ -93,6 +92,7 @@
     <string name="textView_lanw">Width</string>
     <string name="textView_lanh">Hight</string>
     <string name="button_printlan">Print</string>
+    <string name="button_screen_print">Screen printing</string>
     <string name="autoCompleteText_lan">
 	Chinese --> 我爱你\r\nEnglish --> I love you\r\nFrench --> Je t`aime\r\nGerman --> Ich liebe Dich\r\nFinland --> Minarakastan sinua\r\nHolland --> IK hou van jou\r\nCzech  --> Miluji te\r\nDanish--> Jeg elsker dig\r\nRussian--> Я люблю тебя\r\nJapanese --> あいしてる\r\nKorean --> 사랑해 \r\nThai--> Ch`an Rak Khun\r\nVietnamese --> Em ye`u anh\r\nIcelandic --> e`g elska tig\r\nSwedish --> Jag lskar dig\r\nJewish--> Ani ohev otach\r\nHungarian --> Szeretlek\r\nGreek --> S`agapo\r\nLithuanian --> Tave Myliu\r\n
 	</string>
@@ -137,4 +137,12 @@
 \r\nCompany Name:Beijing RuiGong\r\nE_mai:sales@regotek.com\r\nUrl:http://www.regotek.com/\r\nTel :+8610-59487237\r\nAdd:F2 DASCOM Building, No.9 Shangdi East Road, Haidian District, Beijing, 100085 China</string>
 
     <string name="button_desktop">Desktop Print</string>
+
+    <string name="crop_save_text" >save</string>
+    <string name="crop_discard_text" >give up</string>
+
+    <string name="wallpaper" >Is set wallpaper...</string>
+    <string name="savingImage" >Is the photo...</string>
+    <string name="multiface_crop_help">Touch the face began to cut</string>
+    <string name="runningFaceDetection">please wait...</string>
 </resources>

@@ -1,11 +1,6 @@
 package com.print.demo.printview;
 
-import java.util.ArrayList;
-
-import utils.ApplicationContext;
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -21,8 +16,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.print.demo.R;
+import com.print.demo.firstview.BaseActivity;
 
-public class TextFirstActivity extends Activity {
+import utils.ApplicationContext;
+
+public class TextFirstActivity extends BaseActivity {
 	public AutoCompleteTextView text;
 	public Button PrintText;
 

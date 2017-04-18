@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.util.List;
 
 import utils.ApplicationContext;
+import utils.SharedXmlUtil;
 
 public class ConnectAvtivity extends Activity {
 
@@ -83,6 +84,7 @@ public class ConnectAvtivity extends Activity {
 
 
 	private void modelJudgmen() {
+		boolean configFileExists = ConfigUtils.isConfigFileExists();
 		mRead = ConfigUtils.readConfig(this);
 		ReadBean.PrintBean print = mRead.getPrint();
 		String powerType = print.getPowerType();
@@ -92,8 +94,10 @@ public class ConnectAvtivity extends Activity {
 		state = context.getObject().CON_ConnectDevices("RG-E487",
 				serialPort + ":" + braut + ":1:1", 200);
 		int[] intArray = new int[gpio.size()];
+		String intArrayStr="";
 		for (int i = 0; i < gpio.size(); i++) {
 			intArray[i] = gpio.get(i);
+			intArrayStr=intArrayStr+intArray[i]+" ";
 		}
 		try {
 			deviceControl = new DeviceControl(powerType,intArray);
@@ -101,6 +105,8 @@ public class ConnectAvtivity extends Activity {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		SharedXmlUtil.getInstance(this).write("PrintConfig",
+				"配置文件："+configFileExists+";"+serialPort+";"+braut+";"+intArrayStr);
 	}
 
 	// 程序退出时需要关闭电源 省电

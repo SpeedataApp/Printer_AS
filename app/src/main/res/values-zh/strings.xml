@@ -2,18 +2,18 @@
 <resources>
 
     <string name="app_name">PrintApp1.0.3</string>
-    
+
     <!-- Toast提示 -->
-  <string name="null_wight_hight">宽或高不能为空</string>
-  <string name="null_barversion_barerr_barsize">有空白项,请确认</string>
-  <string name="max_hight_255">高度不能超过255</string>
-  <string name="max_qrchir_6">放大倍数只能是1到6</string>
-  <string name="null_zoom">放大倍数不能为空</string>
-  <string name="wrong_version">错误的版本</string>
-  <string name="gary_value_large">数值必须小于30</string>
-  <string name="gary_set_ok">设置成功</string>
-  <string name="gary_null_input">请输入灰度</string>
-  
+    <string name="null_wight_hight">宽或高不能为空</string>
+    <string name="null_barversion_barerr_barsize">有空白项,请确认</string>
+    <string name="max_hight_255">高度不能超过255</string>
+    <string name="max_qrchir_6">放大倍数只能是1到6</string>
+    <string name="null_zoom">放大倍数不能为空</string>
+    <string name="wrong_version">错误的版本</string>
+    <string name="gary_value_large">数值必须小于30</string>
+    <string name="gary_set_ok">设置成功</string>
+    <string name="gary_null_input">请输入灰度</string>
+
     <!-- connect页面 -->
     <string name="text_type">机型</string>
     <string name="text_porttype">接口</string>
@@ -26,7 +26,7 @@
     <string name="mes_nextpage">请先连接</string>
     <!-- printmode页面 -->
     <string name="button_text">文本</string>
-     <string name="button_txt">打印TXT文件</string>
+    <string name="button_txt">打印TXT文件</string>
     <string name="button_pic">图形</string>
     <string name="button_label">标签打印</string>
     <string name="button_print_setting">打印当前参数</string>
@@ -40,13 +40,13 @@
     <string name="dialog_cancel">取消</string>
     <string name="btnteston_text">疲劳测试</string>
     <string name="btntestoff_text">开始测试</string>
-    
+
     <string name="exit_dialog_title">退出程序?</string>
     <string name="exit_dialog_message">确定退出吗?</string>
     <string name="exit_dialog_neutral_button_text">设置</string>
     <string name="exit_dialog_negative_button_text">退出</string>
     <string name="exit_dialog_positive_button_text">取消</string>
-    
+
     <string name="mes_noeg">当前选择的不是标签打印机或当前打印机类型不支持</string>
     <!-- general页面 -->
     <string name="editText1">x</string>
@@ -66,7 +66,7 @@
     <string name="radio2">右对齐</string>
     <string name="button_printtext"> 打                 印  </string>
     <string name="button_state">状态查询</string>
-     <string name="mes_stateOK">打印机状态：正确</string>
+    <string name="mes_stateOK">打印机状态：正确</string>
     <string name="mes_statePE">打印机状态：缺纸</string>
     <string name="mes_stateNet">打印机状态：网络异常</string>
     <!-- barcode页面 -->
@@ -92,6 +92,8 @@
     <string name="textView_lanw">宽</string>
     <string name="textView_lanh">高</string>
     <string name="button_printlan">打印</string>
+    <string name="button_screen_print">截屏打印</string>
+
     <string name="autoCompleteText_lan">汉语 --> 我爱你\r\n英语 --> I love you\r\n法语 --> Je t`aime \r\n德语 --> Ich liebe Dich\r\n芬兰 --> Minarakastan sinua\r\n荷兰 --> IK hou van jou\r\n捷克 --> Miluji te\r\n丹麦 --> Jeg elsker dig\r\n
 	俄罗斯 --> Я люблю тебя\r\n
 	日本 --> あいしてる \r\n 
@@ -147,4 +149,13 @@
 \r\n公司名称：北京瑞工科技有限公司\r\n邮箱：mk@rgprt.com\r\n网址：http://www.rgprt.com/\r\n联系电话：010-62985019\r\n地址：北京市海淀区上地东路9号得实大厦二层中区5号</string>
 
     <string name="button_desktop">桌面打印</string>
+
+
+    <string name="crop_save_text" >"保存"</string>
+    <string name="crop_discard_text" >"舍弃"</string>
+
+    <string name="wallpaper" >"正在设置壁纸..."</string>
+    <string name="savingImage" >"正在保存照片..."</string>
+    <string name="multiface_crop_help">"触摸一张脸开始裁剪。"</string>
+    <string name="runningFaceDetection">"请稍候..."</string>
 </resources>

@@ -1,17 +1,17 @@
 package com.print.demo.printview;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.print.demo.R;
+import com.print.demo.firstview.BaseActivity;
 
 import utils.ApplicationContext;
 import utils.preDefiniation;
 
-public class TextThirdActivity extends Activity {
+public class TextThirdActivity extends BaseActivity {
 	public Button fire;
 	public Button move;
 	public Button shopping;

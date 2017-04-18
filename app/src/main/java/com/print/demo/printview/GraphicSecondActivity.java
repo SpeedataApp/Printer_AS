@@ -1,7 +1,6 @@
 package com.print.demo.printview;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.print.demo.R;
+import com.print.demo.firstview.BaseActivity;
 
 import java.io.InputStream;
 
@@ -17,7 +17,7 @@ import rego.printlib.export.regoPrinter;
 import utils.ApplicationContext;
 import utils.preDefiniation.BarcodeType;
 
-public class GraphicSecondActivity extends Activity {
+public class GraphicSecondActivity extends BaseActivity {
 	private ApplicationContext context;
 	private Button pridraw;
 	// 高宽设置

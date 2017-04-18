@@ -1,6 +1,5 @@
 package com.print.demo.secondview;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
@@ -26,6 +25,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.print.demo.R;
+import com.print.demo.firstview.BaseActivity;
 import com.print.demo.firstview.ConnectAvtivity;
 import com.print.demo.printview.GraphicTabsActivity;
 import com.print.demo.printview.TextTabsActivity;
@@ -35,9 +35,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import utils.ApplicationContext;
+import utils.SharedXmlUtil;
 import utils.TXTUtil;
 
-public class PrintModeActivity extends Activity implements OnClickListener {
+public class PrintModeActivity extends BaseActivity implements OnClickListener {
 	public Button text;
 	public Button pic;
 
@@ -49,7 +50,7 @@ public class PrintModeActivity extends Activity implements OnClickListener {
 	private Button btnSertGray;
 	private EditText evGrayLevel;
 	private Button mButtonPrintSettings;
-	private TextView tvVersion;
+	private TextView tvVersion,tvConfig;
 
 	private Spinner spCoding;
 	private String code;
@@ -68,7 +69,8 @@ public class PrintModeActivity extends Activity implements OnClickListener {
 		pic = (Button) findViewById(R.id.button_pic);
 		mButtonPrintSettings = (Button) findViewById(R.id.button_print_setting);
 		tvVersion = (TextView) findViewById(R.id.tv_version);
-
+		tvConfig= (TextView) findViewById(R.id.tv_config);
+		tvConfig.setText(SharedXmlUtil.getInstance(mContext).read("PrintConfig", ""));
 		//打印TXT
 		spCoding=(Spinner) findViewById(R.id.sp_coding);
 		spCoding.setOnItemSelectedListener(new OnItemSelectedListener() {
@@ -190,7 +192,7 @@ public class PrintModeActivity extends Activity implements OnClickListener {
 		if (timer == null) {
 			timer = new Timer();
 		}
-		timer.schedule(new TestTimerTask(), 1000, period);
+		timer.schedule(new TestTimerTask(), 0, period);
 
 	}
 
