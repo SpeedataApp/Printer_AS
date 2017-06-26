@@ -17,6 +17,7 @@ import rego.printlib.export.regoPrinter;
 import utils.ApplicationContext;
 import utils.preDefiniation.BarcodeType;
 
+@SuppressWarnings("ResourceType")
 public class GraphicSecondActivity extends BaseActivity {
 	private ApplicationContext context;
 	private Button pridraw;
