@@ -5,18 +5,21 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context="${relativePackage}.${activityClass}" >
+    tools:context="${relativePackage}.${activityClass}">
+
     <TextView
-        android:padding="5dp"
-        android:textColor="@color/black"
         android:id="@+id/tv_config"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="@color/black" />
+
     <LinearLayout
         android:id="@+id/linearlayout001"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button_paper_in"
@@ -37,33 +40,37 @@
         android:id="@+id/button_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="@string/button_text"
         android:textSize="20sp" />
-    
+
     <LinearLayout
         android:id="@+id/ll_coding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        <Spinner 
-            android:entries="@+array/coding"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Spinner
             android:id="@+id/sp_coding"
             android:layout_width="110dp"
-            android:layout_height="wrap_content">
-        </Spinner>
-       <Button
-        android:id="@+id/btn_print_txt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/button_txt"
-        android:textSize="20sp" />
-    
+            android:layout_height="wrap_content"
+            android:entries="@+array/coding"></Spinner>
+
+        <Button
+            android:id="@+id/btn_print_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_txt"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
     <Button
         android:id="@+id/button_pic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="@string/button_pic"
         android:textSize="20sp" />
 
@@ -74,7 +81,8 @@
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
         android:layout_marginTop="5dp"
-        android:orientation="vertical" >
+        android:layout_weight="1"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="fill_parent"
@@ -89,7 +97,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:hint="@string/set_gra_level_hint"
-            android:inputType="number" >
+            android:inputType="number">
 
             <requestFocus />
         </EditText>
@@ -99,6 +107,7 @@
         android:id="@+id/button_set_gray"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="@string/button_set_gray" />
 
     <LinearLayout
@@ -106,7 +115,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:orientation="horizontal" >
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button_print_setting"
@@ -124,11 +134,35 @@
             android:textOn="@string/btnteston_text" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/button_black_mark_on"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/button_black_mark_on" />
+
+        <Button
+            android:id="@+id/button_black_mark_off"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/button_black_mark_off" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tv_version"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
+        android:layout_weight="1"
         android:text="1.0.0" />
 
 </LinearLayout>

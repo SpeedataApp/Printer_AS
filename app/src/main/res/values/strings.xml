@@ -28,6 +28,8 @@
     <string name="button_pic">Graphic</string>
     <string name="button_label">Label Print</string>
     <string name="button_print_setting">Print test data</string>
+    <string name="button_black_mark_on">Black Mark On</string>
+    <string name="button_black_mark_off">Black Mark Off</string>
     <string name="button_paper_in">PaperFeed</string>
     <string name="button_paper_out">PaperBack</string>
     <string name="button_set_gray">Set gray</string>
