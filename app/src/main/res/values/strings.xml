@@ -147,4 +147,6 @@
     <string name="savingImage" >Is the photo...</string>
     <string name="multiface_crop_help">Touch the face began to cut</string>
     <string name="runningFaceDetection">please wait...</string>
+
+    <string name="printLoad">Reading data from files...</string>
 </resources>

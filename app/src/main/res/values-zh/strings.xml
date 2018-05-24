@@ -160,4 +160,5 @@
     <string name="savingImage">"正在保存照片..."</string>
     <string name="multiface_crop_help">"触摸一张脸开始裁剪。"</string>
     <string name="runningFaceDetection">"请稍候..."</string>
+    <string name="printLoad">文件读取中...</string>
 </resources>

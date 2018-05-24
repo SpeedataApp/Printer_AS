@@ -8,6 +8,8 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.util.Log;
@@ -25,13 +27,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.kaopiz.kprogresshud.KProgressHUD;
 import com.print.demo.R;
 import com.print.demo.firstview.BaseActivity;
 import com.print.demo.firstview.ConnectAvtivity;
 import com.print.demo.printview.GraphicTabsActivity;
 import com.print.demo.printview.TextTabsActivity;
 
-import java.io.UnsupportedEncodingException;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -326,44 +328,56 @@ public class PrintModeActivity extends BaseActivity implements OnClickListener {
     }
 
     private final static int MY_REQUEST_CODE = 1;
+    private KProgressHUD kProgressHUD;
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, final Intent data) {
         // TODO Auto-generated method stub
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == MY_REQUEST_CODE)// 自定义的一个static final int常量
         {
             if (resultCode == RESULT_OK) {
-                Uri uri = data.getData();
-                // new AlertDialog.Builder(mContext).setMessage(uri+"").show();
-                ContentResolver resolver = getContentResolver();
-                // ContentResolver对象的getType方法可返回形如content://的Uri的类型
-                // 如果是一张图片，返回结果为image/jpeg或image/png等
-                String fileType = resolver.getType(uri);
-                if (fileType.startsWith("text"))// 判断用户选择的是否为图片
-                {
-                    // 根据返回的uri获取图片路径
-                    NewGetPath newGetPath = new NewGetPath();
-                    String resultUri = newGetPath.getPath(mContext, uri);
-                    String resultTXT = TXTUtil.readTxtFile(resultUri.toString(), code);
-                    byte[] gbks = null;
-                    try {
-                        gbks = resultTXT.getBytes(code);
-                    } catch (UnsupportedEncodingException e1) {
-                        // TODO Auto-generated catch block
-                        e1.printStackTrace();
+                kProgressHUD = KProgressHUD.create(PrintModeActivity.this)
+                        .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
+                        .setCancellable(false)
+                        .setLabel(getResources().getString(R.string.printLoad))
+                        .setAnimationSpeed(2)
+                        .setDimAmount(0.5f)
+                        .show();
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Uri uri = data.getData();
+                        // new AlertDialog.Builder(mContext).setMessage(uri+"").show();
+                        ContentResolver resolver = getContentResolver();
+                        // ContentResolver对象的getType方法可返回形如content://的Uri的类型
+                        // 如果是一张图片，返回结果为image/jpeg或image/png等
+                        String fileType = resolver.getType(uri);
+                        if (fileType.startsWith("text"))// 判断用户选择的是否为图片
+                        {
+                            // 根据返回的uri获取图片路径
+                            NewGetPath newGetPath = new NewGetPath();
+                            String resultUri = newGetPath.getPath(mContext, uri);
+                            TXTUtil.readTxtFile(mContext, resultUri.toString(), code);
+
+                            handler.sendMessage(handler.obtainMessage(1));
+                        }
                     }
+                }).start();
 
-                    mContext.getObject().ASCII_PrintBuffer(mContext.getState(), gbks, gbks.length);
-
-                    Toast.makeText(PrintModeActivity.this, resultTXT + "",
-                            Toast.LENGTH_LONG).show();
-                }
             }
         }
 
     }
 
+
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            kProgressHUD.dismiss();
+        }
+    };
     // testIN进纸
 
     private void testIN() {
