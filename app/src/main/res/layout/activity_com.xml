@@ -33,7 +33,7 @@
                     android:textColor="#000"
                     android:textSize="20sp" />
             </RelativeLayout>
-           
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -56,10 +56,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/Text_com"
-                    android:entries="@+array/comName"
+                    android:entries="@array/comName"
                     android:textColor="#000" />
             </RelativeLayout>
-       <RelativeLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -80,10 +80,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/Text_Baud"
-                    android:entries="@+array/comBaud"
+                    android:entries="@array/comBaud"
                     android:textColor="#000" />
             </RelativeLayout>
-            
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

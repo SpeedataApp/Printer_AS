@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 /**
  * @author Adil Soomro
- * 
+ *
  */
 @SuppressWarnings("deprecation")
 public class GraphicTabsActivity extends TabActivity {

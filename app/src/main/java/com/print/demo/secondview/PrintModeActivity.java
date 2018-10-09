@@ -195,6 +195,7 @@ public class PrintModeActivity extends BaseActivity implements OnClickListener {
 
 
     private void stopTest() {
+        mContext.PrintNLine(3);
         timer.cancel();
         timer = null;
     }

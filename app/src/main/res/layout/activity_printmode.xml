@@ -55,7 +55,7 @@
             android:id="@+id/sp_coding"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:entries="@+array/coding"></Spinner>
+            android:entries="@array/coding"></Spinner>
 
         <Button
             android:id="@+id/btn_print_txt"

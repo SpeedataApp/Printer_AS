@@ -22,7 +22,7 @@ import utils.ApplicationContext;
 
 public class GraphicFirstActivity extends BaseActivity {
 	public AutoCompleteTextView languageText;
-	public Button printLan,button_screen_print;
+	public Button printLan, button_screen_print;
 	// 高宽设置
 	public EditText wight;
 	public EditText hight;
@@ -36,7 +36,7 @@ public class GraphicFirstActivity extends BaseActivity {
 
 		wight = (EditText) findViewById(R.id.editText_lanwide);
 		hight = (EditText) findViewById(R.id.editText_lanhight);
-		button_screen_print= (Button) findViewById(R.id.button_screen_print);
+		button_screen_print = (Button) findViewById(R.id.button_screen_print);
 		button_screen_print.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -55,7 +55,7 @@ public class GraphicFirstActivity extends BaseActivity {
 				String wighttext = wight.getText().toString();
 				String highttext = hight.getText().toString();
 
-				if (("".equalsIgnoreCase(wighttext))||("".equalsIgnoreCase(highttext))) {
+				if (("".equalsIgnoreCase(wighttext)) || ("".equalsIgnoreCase(highttext))) {
 
 					Toast.makeText(GraphicFirstActivity.this,
 							R.string.null_wight_hight, Toast.LENGTH_SHORT).show();
@@ -71,42 +71,46 @@ public class GraphicFirstActivity extends BaseActivity {
 
 				// 对多语言数据进行处理一行一行处理
 				int y = 25;
-				int size=8;
+				int size = 8;
 				String str[] = languageText.getText().toString().split("\n");
 				for (int i = 0; i < str.length; i++) {
 					y += 25;
 
 					context.getObject().DRAW_PrintText(context.getState(), 20,
 							y, str[i], 20);
-					size+=2;
+					size += 2;
 				}
 				context.getObject().CON_PageEnd(context.getState(),
 						context.getPrintway());
+
+				//空行
+				context.getObject().ASCII_PrintBuffer(context.getState(), new byte[]{0x1B, 0x66, 1,
+						(byte) 4}, 4);
 			}
 		});
 	}
 
+
 	/**
 	 * 获取和保存当前屏幕的截图
 	 */
-	private void GetandSaveCurrentImage()
-	{
+	private void GetandSaveCurrentImage() {
 		//1.构建Bitmap
 		WindowManager windowManager = getWindowManager();
 		Display display = windowManager.getDefaultDisplay();
 		int w = display.getWidth();
 		int h = display.getHeight();
-		Bitmap Bmp = Bitmap.createBitmap( w, h, Bitmap.Config.ARGB_8888 );
+		Bitmap Bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
 
 		//2.获取屏幕
 		View decorview = this.getWindow().getDecorView();
 		decorview.setDrawingCacheEnabled(true);
 		Bmp = decorview.getDrawingCache();
-		Intent intent=new Intent(GraphicFirstActivity.this,CropImage.class);
-		ByteArrayOutputStream baos=new ByteArrayOutputStream();
+		Intent intent = new Intent(GraphicFirstActivity.this, CropImage.class);
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		Bmp.compress(Bitmap.CompressFormat.PNG, 100, baos);
-		byte [] bitmapByte =baos.toByteArray();
-		intent.putExtra("bitmap",bitmapByte);
+		byte[] bitmapByte = baos.toByteArray();
+		intent.putExtra("bitmap", bitmapByte);
 		startActivity(intent);
 	}
 }

@@ -22,15 +22,14 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    
+
     <application
         android:name="utils.ApplicationContext"
         android:icon="@drawable/icon"
         android:theme="@style/app_theme" >
         <activity
             android:name="com.print.demo.firstview.ConnectAvtivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,49 +43,36 @@
                 android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
                 android:resource="@xml/device_filter" />
         </activity>
-        
-       
+
+
         <activity
-            android:name="com.print.demo.printview.TextFirstActivity"
-            android:screenOrientation="portrait" />
+            android:name="com.print.demo.printview.TextFirstActivity" />
         <activity
-            android:name="com.print.demo.printview.TextSecondActivity"
-            android:screenOrientation="portrait" />
+            android:name="com.print.demo.printview.TextSecondActivity"/>
         <activity
-  			android:name="com.print.demo.printview.TextTabsActivity"
-            android:screenOrientation="portrait"
+            android:name="com.print.demo.printview.TextTabsActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-  			android:name="com.print.demo.printview.TextThirdActivity"
-            android:screenOrientation="portrait" />
+            android:name="com.print.demo.printview.TextThirdActivity" />
         <activity
-  			android:name = "com.print.demo.printview.GraphicThirdActivity"
-            android:screenOrientation="portrait" />
+            android:name = "com.print.demo.printview.GraphicThirdActivity"/>
         <activity
-  			android:name = "com.print.demo.printview.GraphicSecondActivity"
-            android:screenOrientation="portrait" />
+            android:name = "com.print.demo.printview.GraphicSecondActivity" />
         <activity
-  			android:name = "com.print.demo.printview.GraphicFirstActivity"
-            android:screenOrientation="portrait" />
+            android:name = "com.print.demo.printview.GraphicFirstActivity" />
         <activity
             android:name="com.print.demo.printview.GraphicTabsActivity"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="utils.LinkContactActivity"
-            android:screenOrientation="portrait" />
+            android:name="utils.LinkContactActivity" />
         <activity
-            android:name=".BluetoothActivity"
-            android:screenOrientation="portrait" />
+            android:name=".BluetoothActivity" />
         <activity
-            android:name="com.goonear.crop.CropImage"
-            android:screenOrientation="portrait" />
+            android:name="com.goonear.crop.CropImage" />
         <activity
-            android:name="com.print.demo.secondview.PrintModeActivity"
-            android:screenOrientation="portrait" />
+            android:name="com.print.demo.secondview.PrintModeActivity"/>
         <activity
-            android:name=".firstview.BaseActivity"
-            android:screenOrientation="portrait" />
+            android:name=".firstview.BaseActivity" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

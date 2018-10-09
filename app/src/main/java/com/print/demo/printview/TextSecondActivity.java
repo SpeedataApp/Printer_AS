@@ -52,11 +52,11 @@ public class TextSecondActivity extends BaseActivity {
 		setUI();
 		group_barcode.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
-					@Override
-					public void onCheckedChanged(RadioGroup group, int checkedId) {
-						whereChecked(group);
-					}
-				});
+			@Override
+			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				whereChecked(group);
+			}
+		});
 
 		barcodetype.setOnItemSelectedListener(new OnItemSelectedListener() {
 			@Override
@@ -121,20 +121,20 @@ public class TextSecondActivity extends BaseActivity {
 		//判断高度和宽度是否为空
 		if (("".equalsIgnoreCase(widetext))||("".equalsIgnoreCase(highttext))) {
 
-            Toast.makeText(TextSecondActivity.this,
-                    R.string.null_barversion_barerr_barsize, Toast.LENGTH_SHORT).show();
-            return;
-        }
+			Toast.makeText(TextSecondActivity.this,
+					R.string.null_barversion_barerr_barsize, Toast.LENGTH_SHORT).show();
+			return;
+		}
 		int hightnumber=Integer.parseInt(highttext);
 
 		if(hightnumber>255){
-            Toast.makeText(TextSecondActivity.this,
-                    R.string.max_hight_255, Toast.LENGTH_SHORT).show();
-            return;
-        }
+			Toast.makeText(TextSecondActivity.this,
+					R.string.max_hight_255, Toast.LENGTH_SHORT).show();
+			return;
+		}
 
 		context.getObject().CON_PageStart(context.getState(), false, 0,
-                0);
+				0);
 		int hri = hripostion.getSelectedItemPosition();
 		int wide = Integer.parseInt(barwide.getText().toString());
 		int hight = Integer.parseInt(barhight.getText().toString());
@@ -142,91 +142,94 @@ public class TextSecondActivity extends BaseActivity {
 		// 对齐方式
 
 		context.getObject().ASCII_CtrlAlignType(context.getState(),
-                context.getAlignType());
+				context.getAlignType());
 
 
 		if (barcode.isChecked()) {
 
-            context.getObject().ASCII_Print1DBarcode(
-                    context.getState(),
-                    barcodetype.getSelectedItemPosition() + 65,
-                    wide,
-                    hight,
-                    hri, bartext.getText().toString());
-        } else {
+			context.getObject().ASCII_Print1DBarcode(
+					context.getState(),
+					barcodetype.getSelectedItemPosition() + 65,
+					wide,
+					hight,
+					hri, bartext.getText().toString());
+		} else {
 
-            //限制放大倍数输入不为空
-            String hritext=barhri.getText().toString();
+			//限制放大倍数输入不为空
+			String hritext=barhri.getText().toString();
 
-            if(TextUtils.isEmpty(hritext)){
-                Toast.makeText(TextSecondActivity.this,
-                        R.string.null_zoom, Toast.LENGTH_SHORT).show();
-                return;
-            }
-            //限制放大倍数不超过6并且不小于1
-            int qrcHir = Integer.parseInt(hritext);
-            if(qrcHir>6||qrcHir<1){
-                Toast.makeText(TextSecondActivity.this,
-                        R.string.max_qrchir_6, Toast.LENGTH_SHORT).show();
-                return;
-            }
+			if(TextUtils.isEmpty(hritext)){
+				Toast.makeText(TextSecondActivity.this,
+						R.string.null_zoom, Toast.LENGTH_SHORT).show();
+				return;
+			}
+			//限制放大倍数不超过6并且不小于1
+			int qrcHir = Integer.parseInt(hritext);
+			if(qrcHir>6||qrcHir<1){
+				Toast.makeText(TextSecondActivity.this,
+						R.string.max_qrchir_6, Toast.LENGTH_SHORT).show();
+				return;
+			}
 
-            context.getObject().ASCII_Print2DBarcode(
-                    context.getState(),
-                    barcodetype.getSelectedItemPosition(),
-                    bartext.getText().toString(),
-                    wide,
-                    hight,
-                    qrcHir);
-            System.out.println("===============1:"+wide+"  2:"+hight+"  3:"+qrcHir);
-        }
+			context.getObject().ASCII_Print2DBarcode(
+					context.getState(),
+					barcodetype.getSelectedItemPosition(),
+					bartext.getText().toString(),
+					wide,
+					hight,
+					qrcHir);
+			System.out.println("===============1:"+wide+"  2:"+hight+"  3:"+qrcHir);
+		}
 		context.getObject().ASCII_CtrlFeedLines(context.getState(),3);
 		context.getObject().CON_PageEnd(context.getState(),
-                context.getPrintway());
+				context.getPrintway());
+		//空行
+		context.getObject().ASCII_PrintBuffer(context.getState(), new byte[]{0x1B, 0x66, 1,
+				(byte) 4}, 4);
 	}
 
 	private void whereChecked(RadioGroup group) {
 		switch (group.getCheckedRadioButtonId()) {
-            case R.id.barcode:
-                //让其可以被修改
-                barwide.setEnabled(true);
-                barhight.setEnabled(true);
-                images = getResources().obtainTypedArray(
-                        R.array.barcodepic);
-                defValues = getResources().getStringArray(
-                        R.array.barcodedefault);
-                // 在列表视图中所代表的对象。
-                adapterArea = new ArrayAdapter<String>(
-                        TextSecondActivity.this,
-                        android.R.layout.simple_spinner_item,
-                        getResources().getStringArray(
-                                R.array.barcodetype));// 在列表视图中所代表的对象。
-                adapterArea
-                        .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                barcodetype.setAdapter(adapterArea);
-                break;
-            case R.id.QRcode:
-                images = getResources().obtainTypedArray(
-                        R.array.QRpic);
-                defValues = getResources().getStringArray(
-                        R.array.QRdefault);
-                imageView.setImageDrawable(images.getDrawable(0));
-                adapterArea = new ArrayAdapter<String>(
-                        TextSecondActivity.this,
-                        android.R.layout.simple_spinner_item,
-                        getResources().getStringArray(
-                                R.array.QRtype));// 在列表视图中所代表的对象。
-                adapterArea
-                        .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                barcodetype.setAdapter(adapterArea);
-                // 根据不同的条码，显示文字不一样
-                twide.setText(R.string.textView_barversion);// "版本"
-                thight.setText(R.string.textView_barerr);// "纠错"
-                thri.setText(R.string.textView_barsize);// "放大"
-                break;
-            default:
-                break;
-        }
+			case R.id.barcode:
+				//让其可以被修改
+				barwide.setEnabled(true);
+				barhight.setEnabled(true);
+				images = getResources().obtainTypedArray(
+						R.array.barcodepic);
+				defValues = getResources().getStringArray(
+						R.array.barcodedefault);
+				// 在列表视图中所代表的对象。
+				adapterArea = new ArrayAdapter<String>(
+						TextSecondActivity.this,
+						android.R.layout.simple_spinner_item,
+						getResources().getStringArray(
+								R.array.barcodetype));// 在列表视图中所代表的对象。
+				adapterArea
+						.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+				barcodetype.setAdapter(adapterArea);
+				break;
+			case R.id.QRcode:
+				images = getResources().obtainTypedArray(
+						R.array.QRpic);
+				defValues = getResources().getStringArray(
+						R.array.QRdefault);
+				imageView.setImageDrawable(images.getDrawable(0));
+				adapterArea = new ArrayAdapter<String>(
+						TextSecondActivity.this,
+						android.R.layout.simple_spinner_item,
+						getResources().getStringArray(
+								R.array.QRtype));// 在列表视图中所代表的对象。
+				adapterArea
+						.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+				barcodetype.setAdapter(adapterArea);
+				// 根据不同的条码，显示文字不一样
+				twide.setText(R.string.textView_barversion);// "版本"
+				thight.setText(R.string.textView_barerr);// "纠错"
+				thri.setText(R.string.textView_barsize);// "放大"
+				break;
+			default:
+				break;
+		}
 	}
 
 	private void setUI() {

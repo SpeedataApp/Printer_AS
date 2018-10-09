@@ -173,6 +173,9 @@ public class TextFirstActivity extends BaseActivity {
                 }
                 context.getObject().CON_PageEnd(context.getState(),
                         context.getPrintway());
+                //空行
+                context.getObject().ASCII_PrintBuffer(context.getState(), new byte[]{0x1B, 0x66, 1,
+                        (byte) 4}, 4);
             }
         });
     }

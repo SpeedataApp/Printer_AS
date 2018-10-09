@@ -68,153 +68,153 @@ public class GraphicThirdActivity extends BaseActivity {
 	private void drawShopTicket() {
 		int size = 20;
 		context.getObject().CON_PageStart(context.getState(), true,
-                576, 500);
+				576, 500);
 		context.getObject().DRAW_SetFillMode(false);
 		context.getObject().DRAW_SetLineWidth(2);
 		context.getObject().DRAW_PrintText(context.getState(), 100, 5,
-                "欢迎光临", 25);
+				"欢迎光临", 25);
 		context.getObject().DRAW_PrintText(context.getState(), 110, 35,
-                "店铺名称", size);
+				"店铺名称", size);
 
 		context.getObject().DRAW_PrintText(context.getState(), 5, 60,
-                "收银员：收银员名称", size);
+				"收银员：收银员名称", size);
 		context.getObject().DRAW_PrintText(context.getState(), 5, 85,
-                "时间：2015-01-01", size);
+				"时间：2015-01-01", size);
 		context.getObject().DRAW_PrintLine(context.getState(), 2, 105,
-                300, 105);
+				300, 105);
 		context.getObject().DRAW_PrintText(context.getState(), 5, 125,
-                "商品名称           单价        数量        金额", 22);
+				"商品名称           单价        数量        金额", 22);
 
 		context.getObject().DRAW_PrintText(context.getState(), 5, 150,
-                "花生                      2.00          1       2.00",
-                size);
+				"花生                      2.00          1       2.00",
+				size);
 		context.getObject().DRAW_PrintLine(context.getState(), 2, 170,
-                300, 170);
+				300, 170);
 		context.getObject().DRAW_PrintText(context.getState(), 5, 190,
-                "合计:￥100元", size);
+				"合计:￥100元", size);
 		context.getObject().DRAW_PrintText(context.getState(), 5, 215,
-                "优惠金额:￥90元", size);
+				"优惠金额:￥90元", size);
 		context.getObject().DRAW_PrintLine(context.getState(), 2, 235,
-                300, 235);
+				300, 235);
 		context.getObject().DRAW_PrintText(context.getState(), 5, 255,
-                "电话：22222222222", size);
+				"电话：22222222222", size);
 
 		context.getObject().DRAW_PrintText(context.getState(), 5, 280,
-                "地址：北京得实大厦", size);
+				"地址：北京得实大厦", size);
 		context.getObject().DRAW_PrintText(context.getState(), 5, 305,
-                "谢谢惠顾，欢迎下次光临！", size);
+				"谢谢惠顾，欢迎下次光临！", size);
 		context.getObject().CON_PageEnd(context.getState(),
-                context.getPrintway());
+				context.getPrintway());
 	}
 
 	private void drawCinemaTicket() {
 		context.getObject().CON_PageStart(context.getState(), true,
-                384, 510);
+				384, 510);
 		context.getObject().DRAW_SetFillMode(false);
 		context.getObject().DRAW_SetLineWidth(4);
 		context.getObject().DRAW_PrintText(context.getState(), 95, 25,
-                "瑞工国际影城", 25);
+				"瑞工国际影城", 25);
 		context.getObject().DRAW_PrintLine(context.getState(), 95, 65,
-                300, 65);
+				300, 65);
 		context.getObject().DRAW_SetLineWidth(2);
 		context.getObject().DRAW_PrintLine(context.getState(), 0, 90,
-                390, 90);
+				390, 90);
 		context.getObject().DRAW_PrintText(context.getState(), 85, 110,
-                "请在电影开始前入场", 18);
+				"请在电影开始前入场", 18);
 		// 矩形
 		context.getObject().DRAW_PrintRectangle(context.getState(), 18,
-                165, 180, 235);
+				165, 180, 235);
 		context.getObject().DRAW_PrintRectangle(context.getState(),
-                185, 165, 375, 235);
+				185, 165, 375, 235);
 		context.getObject().DRAW_PrintRectangle(context.getState(), 18,
-                240, 375, 300);
+				240, 375, 300);
 		context.getObject().DRAW_PrintRectangle(context.getState(), 18,
-                305, 180, 350);
+				305, 180, 350);
 		context.getObject().DRAW_PrintRectangle(context.getState(),
-                185, 305, 375, 350);
+				185, 305, 375, 350);
 		context.getObject().DRAW_PrintRectangle(context.getState(), 18,
-                360, 375, 410);
+				360, 375, 410);
 		// 文字
 		context.getObject().DRAW_PrintText(context.getState(), 25, 185,
-                "影厅", 22);
+				"影厅", 22);
 		context.getObject().DRAW_PrintText(context.getState(), 195,
-                185, "时间", 22);
+				185, "时间", 22);
 		context.getObject().DRAW_PrintText(context.getState(), 25, 255,
-                "影片", 22);
+				"影片", 22);
 		context.getObject().DRAW_PrintText(context.getState(), 25, 315,
-                "座位", 22);
+				"座位", 22);
 		context.getObject().DRAW_PrintText(context.getState(), 195,
-                315, "票价", 22);
+				315, "票价", 22);
 		// 变化文字
 		context.getObject().DRAW_PrintText(context.getState(), 70, 180,
-                "得实大厦", 22);
+				"得实大厦", 22);
 		context.getObject().DRAW_PrintText(context.getState(), 240,
-                180, "2015年2月1号12:00", 22);
+				180, "2015年2月1号12:00", 22);
 		context.getObject().DRAW_PrintText(context.getState(), 75, 250,
-                "心花怒放", 22);
+				"心花怒放", 22);
 		context.getObject().DRAW_PrintText(context.getState(), 70, 315,
-                "01排01号", 22);
+				"01排01号", 22);
 		context.getObject().DRAW_PrintText(context.getState(), 235,
-                315, "80元", 22);
+				315, "80元", 22);
 		context.getObject().DRAW_Print1D2DBarcode(context.getState(),
-                preDefiniation.BarcodeType.BT_UPCA.getValue(), 70, 365, 240, 30,
-                "123456789012");
+				preDefiniation.BarcodeType.BT_UPCA.getValue(), 70, 365, 240, 30,
+				"123456789012");
 		context.getObject().CON_PageEnd(context.getState(),
-                context.getPrintway());
+				context.getPrintway());
 	}
 
 	private void drawTrainTicket() {
 		context.getObject().CON_PageStart(context.getState(), true,
-                384, 370);
+				384, 370);
 		context.getObject().DRAW_SetFillMode(false);
 		context.getObject().DRAW_SetLineWidth(2);
 		context.getObject().DRAW_PrintText(context.getState(), 130, 20,
-                "北京", 20);
+				"北京", 20);
 		context.getObject().DRAW_PrintCircle(context.getState(), 200,
-                30, 15);
+				30, 15);
 		context.getObject().DRAW_PrintText(context.getState(), 190, 20,
-                "售", 20);
+				"售", 20);
 		context.getObject().DRAW_PrintText(context.getState(), 50, 60,
-                "北 京", 22);
+				"北 京", 22);
 		context.getObject().DRAW_PrintText(context.getState(), 290, 60,
-                "武 汉", 22);
+				"武 汉", 22);
 		context.getObject().DRAW_PrintText(context.getState(), 175, 50,
-                "K250次", 20);
+				"K250次", 20);
 		context.getObject().DRAW_PrintLine(context.getState(), 180, 80,
-                240, 80);
+				240, 80);
 		context.getObject().DRAW_PrintLine(context.getState(), 230, 80,
-                220, 75);
+				220, 75);
 		context.getObject().DRAW_PrintText(context.getState(), 55, 100,
-                "Beijing", 16);
+				"Beijing", 16);
 		context.getObject().DRAW_PrintText(context.getState(), 300, 95,
-                "Wuhan", 16);
+				"Wuhan", 16);
 		context.getObject().DRAW_PrintText(context.getState(), 20, 125,
-                "2015年02月15日09:08开", 14);
+				"2015年02月15日09:08开", 14);
 		context.getObject().DRAW_PrintText(context.getState(), 280,
-                125, "12车22号下铺", 16);
+				125, "12车22号下铺", 16);
 		context.getObject().DRAW_PrintText(context.getState(), 23, 150,
-                "￥109元", 22);
+				"￥109元", 22);
 		context.getObject().DRAW_PrintText(context.getState(), 270,
-                155, "新空调硬卧", 16);
+				155, "新空调硬卧", 16);
 		context.getObject().DRAW_PrintText(context.getState(), 20, 185,
-                "仅限当日当次车", 16);
+				"仅限当日当次车", 16);
 
 		context.getObject().DRAW_PrintText(context.getState(), 135, 260,
-                "123456789012345", 16);
+				"123456789012345", 16);
 		context.getObject().DRAW_Print1D2DBarcode(context.getState(),
-                preDefiniation.BarcodeType.BT_QRcode.getValue(), 180, 200, 80, 80,
-                "火车票");
+				preDefiniation.BarcodeType.BT_QRcode.getValue(), 180, 200, 80, 80,
+				"火车票");
 		context.getObject().CON_PageEnd(context.getState(),
-                context.getPrintway());
+				context.getPrintway());
 	}
 
 	private void drawTable() {
 		context.getObject().CON_PageStart(context.getState(), true,
-                900, 1000);
+				900, 1000);
 		int[] hRow = { 50, 50, 50, 50, 50, 50 };// 6行
 		int[] wColumn = { 50, 150, 100, 100, 100, 100, 100, 100 };// 8列
 		context.getObject().DRAW_Table(context.getState(), 0, 700, 900,
-                400, 6, 8, hRow, wColumn, 4);
+				400, 6, 8, hRow, wColumn, 4);
 		bValid = new boolean[8];
 		bValid[0] = true;
 		bValid[1] = true;
@@ -261,7 +261,7 @@ public class GraphicThirdActivity extends BaseActivity {
 		vat[6] = preDefiniation.ValignType.VT_MIDDLE.getValue();
 		vat[7] = preDefiniation.ValignType.VT_MIDDLE.getValue();
 		context.getObject().DRAW_TableRow(context.getState(), bValid,
-                strCell, fs, at, vat);// 第1行
+				strCell, fs, at, vat);// 第1行
 		strCell[0] = "1";
 		strCell[1] = "CG002011";
 		strCell[2] = "批发";
@@ -271,13 +271,13 @@ public class GraphicThirdActivity extends BaseActivity {
 		strCell[6] = "441.00";
 		strCell[7] = "0.00";
 		context.getObject().DRAW_TableRow(context.getState(), bValid,
-                strCell, fs, at, vat);// 第2行
+				strCell, fs, at, vat);// 第2行
 		strCell[0] = "2";
 		context.getObject().DRAW_TableRow(context.getState(), bValid,
-                strCell, fs, at, vat);// 第3行
+				strCell, fs, at, vat);// 第3行
 		strCell[0] = "3";
 		context.getObject().DRAW_TableRow(context.getState(), bValid,
-                strCell, fs, at, vat);// 第4行
+				strCell, fs, at, vat);// 第4行
 		bValid[0] = false;
 		bValid[1] = false;
 		bValid[2] = false;
@@ -291,13 +291,13 @@ public class GraphicThirdActivity extends BaseActivity {
 		strCell = new String[1];
 		strCell[0] = "                               合计                         1323.00         0.00          0.00         1323.00         0.00 ";
 		context.getObject().DRAW_TableRow(context.getState(), bValid,
-                strCell, fs, at, vat);// 第5行
+				strCell, fs, at, vat);// 第5行
 		at[0] = preDefiniation.AlignType.AT_LEFT.getValue();
 		strCell[0] = "本单收款（大写）    壹仟叁佰贰拾叁";
 		context.getObject().DRAW_TableRow(context.getState(), bValid,
-                strCell, fs, at, vat);// 第6行
+				strCell, fs, at, vat);// 第6行
 		context.getObject().DRAW_SetRotate(context.getState(), 90);
 		context.getObject().CON_PageEnd(context.getState(),
-                context.getPrintway());
+				context.getPrintway());
 	}
 }

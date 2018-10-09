@@ -2,6 +2,7 @@ package com.print.demo.firstview;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.serialport.DeviceControl;
 import android.widget.Button;
@@ -53,8 +54,21 @@ public class ConnectAvtivity extends Activity {
 
 	public void connect() {
 
-		// 读取配置文件
-		modelJudgmen();
+		String xinghao = Build.MODEL;
+		if (xinghao.contains("SK80")) {
+			state = context.getObject().CON_ConnectDevices("RG-E487",
+					"/dev/ttyMT3" + ":" + "115200" + ":1:1", 200);
+			try {
+				deviceControl = new DeviceControl(DeviceControl.PowerType.MAIN_AND_EXPAND, 85, 0);
+				deviceControl.PowerOnDevice();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else {
+			// 读取配置文件
+			modelJudgmen();
+		}
+
 		if (mBconnect) {
 			context.getObject().CON_CloseDevices(context.getState());
 
@@ -94,19 +108,19 @@ public class ConnectAvtivity extends Activity {
 		state = context.getObject().CON_ConnectDevices("RG-E487",
 				serialPort + ":" + braut + ":1:1", 200);
 		int[] intArray = new int[gpio.size()];
-		String intArrayStr="";
+		String intArrayStr = "";
 		for (int i = 0; i < gpio.size(); i++) {
 			intArray[i] = gpio.get(i);
-			intArrayStr=intArrayStr+intArray[i]+" ";
+			intArrayStr = intArrayStr + intArray[i] + " ";
 		}
 		try {
-			deviceControl = new DeviceControl(powerType,intArray);
+			deviceControl = new DeviceControl(powerType, intArray);
 			deviceControl.PowerOnDevice();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		SharedXmlUtil.getInstance(this).write("PrintConfig",
-				"配置文件："+configFileExists+";"+serialPort+";"+braut+";"+intArrayStr);
+				"配置文件：" + configFileExists + ";" + serialPort + ";" + braut + ";" + intArrayStr);
 	}
 
 	// 程序退出时需要关闭电源 省电
