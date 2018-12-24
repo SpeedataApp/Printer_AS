@@ -1,4 +1,4 @@
-package speedata.com.newkt45qprint;
+package com.speedata.print;
 
 import org.junit.Test;
 
