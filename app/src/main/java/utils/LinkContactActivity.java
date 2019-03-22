@@ -3,7 +3,8 @@ package utils;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.print.demo.R;
+import com.speedata.print.R;
+
 
 public class LinkContactActivity extends Activity {
  

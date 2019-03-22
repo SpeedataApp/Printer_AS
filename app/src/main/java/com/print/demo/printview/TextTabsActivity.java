@@ -9,7 +9,8 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-import com.print.demo.R;
+import com.speedata.print.R;
+
 
 /**
  * @author Adil Soomro

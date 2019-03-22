@@ -10,10 +10,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.print.demo.R;
+
 import com.print.demo.secondview.PrintModeActivity;
 import com.speedata.libutils.ConfigUtils;
 import com.speedata.libutils.ReadBean;
+import com.speedata.print.R;
 
 import java.io.IOException;
 import java.util.List;

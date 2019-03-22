@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.speedata.print"
-    android:versionCode="1"
-    android:versionName="1.0.3" >
+    package="com.speedata.print">
 
     <uses-feature android:name="android.hardware.usb.host" />
 
-    <uses-sdk
-        android:minSdkVersion="7"
-        android:targetSdkVersion="17" />
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -65,14 +60,13 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="utils.LinkContactActivity" />
-        <activity
-            android:name=".BluetoothActivity" />
+
         <activity
             android:name="com.goonear.crop.CropImage" />
         <activity
             android:name="com.print.demo.secondview.PrintModeActivity"/>
         <activity
-            android:name=".firstview.BaseActivity" />
+            android:name="com.print.demo.firstview.BaseActivity" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

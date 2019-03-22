@@ -17,7 +17,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.print.demo.R;
+
+import com.speedata.print.R;
 
 import java.io.File;
 import java.text.SimpleDateFormat;

@@ -17,8 +17,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.print.demo.R;
+
 import com.print.demo.firstview.BaseActivity;
+import com.speedata.print.R;
 
 import utils.ApplicationContext;
 

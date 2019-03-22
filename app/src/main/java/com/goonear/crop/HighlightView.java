@@ -26,7 +26,8 @@ import android.graphics.Region;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 
-import com.print.demo.R;
+import com.speedata.print.R;
+
 
 // This class is used by CropImage to display a highlighted cropping rectangle
 // overlayed with the image. There are two coordinate spaces in use. One is

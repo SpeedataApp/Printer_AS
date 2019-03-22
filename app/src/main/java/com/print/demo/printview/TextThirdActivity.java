@@ -5,8 +5,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import com.print.demo.R;
+
 import com.print.demo.firstview.BaseActivity;
+import com.speedata.print.R;
 
 import utils.ApplicationContext;
 import utils.preDefiniation;

@@ -13,7 +13,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
-import com.print.demo.R;
+import com.speedata.print.R;
 
 
 /**

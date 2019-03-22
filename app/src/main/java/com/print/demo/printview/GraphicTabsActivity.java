@@ -1,6 +1,6 @@
 package com.print.demo.printview;
 
-import com.print.demo.R;
+
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
+
+import com.speedata.print.R;
 
 /**
  * @author Adil Soomro
@@ -19,6 +21,7 @@ public class GraphicTabsActivity extends TabActivity {
 	TabHost tabHost;
 
 	/** Called when the activity is first created. */
+	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_picmain);

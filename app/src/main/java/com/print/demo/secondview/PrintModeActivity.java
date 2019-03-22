@@ -28,11 +28,12 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.kaopiz.kprogresshud.KProgressHUD;
-import com.print.demo.R;
+
 import com.print.demo.firstview.BaseActivity;
 import com.print.demo.firstview.ConnectAvtivity;
 import com.print.demo.printview.GraphicTabsActivity;
 import com.print.demo.printview.TextTabsActivity;
+import com.speedata.print.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

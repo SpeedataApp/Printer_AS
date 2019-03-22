@@ -13,8 +13,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.goonear.crop.CropImage;
-import com.print.demo.R;
+
 import com.print.demo.firstview.BaseActivity;
+import com.speedata.print.R;
 
 import java.io.ByteArrayOutputStream;
 
