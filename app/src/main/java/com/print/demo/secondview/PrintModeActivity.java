@@ -1,5 +1,6 @@
 package com.print.demo.secondview;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
@@ -63,6 +64,7 @@ public class PrintModeActivity extends BaseActivity implements OnClickListener {
     private ToggleButton btntest;
     private Button btnPrintTxt;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,6 +111,9 @@ public class PrintModeActivity extends BaseActivity implements OnClickListener {
         btnOut.setOnClickListener(this);
         btnSertGray.setOnClickListener(this);
         evGrayLevel = (EditText) findViewById(R.id.ev_gray_level);
+        evGrayLevel.setText("15");
+        //设置灰度默认为15
+        setLevel(15);
         btntest = (ToggleButton) findViewById(R.id.button_test);
         tvVersion.setText(getVersion());
 
@@ -302,6 +307,8 @@ public class PrintModeActivity extends BaseActivity implements OnClickListener {
                 break;
             case R.id.button_black_mark_off:
                 setBlackMark(false);
+                break;
+            default:
                 break;
 
         }
