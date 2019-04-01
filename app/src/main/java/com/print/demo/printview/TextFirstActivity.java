@@ -15,7 +15,6 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.print.demo.firstview.BaseActivity;
 import com.speedata.print.R;
 
@@ -51,6 +50,7 @@ public class TextFirstActivity extends BaseActivity {
     private Context mContext;
 
 
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_general);

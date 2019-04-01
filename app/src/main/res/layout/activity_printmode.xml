@@ -140,7 +140,7 @@
         android:layout_marginTop="5dp"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <Button
             android:id="@+id/button_black_mark_on"

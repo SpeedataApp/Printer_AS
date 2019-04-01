@@ -300,10 +300,10 @@ public class PrintModeActivity extends BaseActivity implements OnClickListener {
             //设置黑标检测
             case R.id.button_black_mark_on:
                 setBlackMark(true);
-//                mContext.getObject().ASCII_PrintBuffer(mContext.getState(), new byte[]{0x0C}, 1);
-//                int printBuffer = mContext.getObject().ASCII_PrintBuffer(mContext.getState(), new byte[]{0x1B, 0x06,
-//                        0x1B, 0x2B, 0x01, 0x1B, 0x16}, 7);
-//                Toast.makeText(mContext, ""+printBuffer, Toast.LENGTH_SHORT).show();
+                mContext.getObject().ASCII_PrintBuffer(mContext.getState(), new byte[]{0x0C}, 1);
+                int printBuffer = mContext.getObject().ASCII_PrintBuffer(mContext.getState(), new byte[]{0x1B, 0x06,
+                        0x1B, 0x2B, 0x01, 0x1B, 0x16}, 7);
+                Toast.makeText(mContext, ""+printBuffer, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.button_black_mark_off:
                 setBlackMark(false);

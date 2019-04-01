@@ -31,6 +31,7 @@ public class GraphicFirstActivity extends BaseActivity {
 	public EditText Y0;
 	public ApplicationContext context;
 
+	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_language);
