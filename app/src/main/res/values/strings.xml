@@ -95,8 +95,7 @@
     <string name="textView_lanh">Hight</string>
     <string name="button_printlan">Print</string>
     <string name="button_screen_print">Screen printing</string>
-    <string name="autoCompleteText_lan">
-	Chinese --> 我爱你\r\nEnglish --> I love you\r\nFrench --> Je t`aime\r\nGerman --> Ich liebe Dich\r\nFinland --> Minarakastan sinua\r\nHolland --> IK hou van jou\r\nCzech  --> Miluji te\r\nDanish--> Jeg elsker dig\r\nRussian--> Я люблю тебя\r\nJapanese --> あいしてる\r\nKorean --> 사랑해 \r\nThai--> Ch`an Rak Khun\r\nVietnamese --> Em ye`u anh\r\nIcelandic --> e`g elska tig\r\nSwedish --> Jag lskar dig\r\nJewish--> Ani ohev otach\r\nHungarian --> Szeretlek\r\nGreek --> S`agapo\r\nLithuanian --> Tave Myliu\r\n
+    <string name="autoCompleteText_lan">Chinese --> 我爱你\r\nEnglish --> I love you\r\nFrench --> Je t`aime\r\nGerman --> Ich liebe Dich\r\nFinland --> Minarakastan sinua\r\nHolland --> IK hou van jou\r\nCzech  --> Miluji te\r\nDanish--> Jeg elsker dig\r\nRussian--> Я люблю тебя\r\nJapanese --> あいしてる\r\nKorean --> 사랑해 \r\nThai--> Ch`an Rak Khun\r\nVietnamese --> Em ye`u anh\r\nIcelandic --> e`g elska tig\r\nSwedish --> Jag lskar dig\r\nJewish--> Ani ohev otach\r\nHungarian --> Szeretlek\r\nGreek --> S`agapo\r\nLithuanian --> Tave Myliu\r\n
 	</string>
     <!-- printdraw页面 -->
     <string name="checkBox_pic">Label</string>
@@ -149,4 +148,6 @@
     <string name="runningFaceDetection">please wait...</string>
 
     <string name="printLoad">Reading data from files...</string>
+    <string name="sp">sp</string>
+    <string name="font_size">Font Size:</string>
 </resources>

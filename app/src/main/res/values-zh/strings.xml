@@ -96,19 +96,28 @@
     <string name="button_printlan">打印</string>
     <string name="button_screen_print">截屏打印</string>
 
-    <string name="autoCompleteText_lan">汉语 --> 我爱你\r\n英语 --> I love you\r\n法语 --> Je t`aime \r\n德语 --> Ich liebe Dich\r\n芬兰 --> Minarakastan sinua\r\n荷兰 --> IK hou van jou\r\n捷克 --> Miluji te\r\n丹麦 --> Jeg elsker dig\r\n
-	俄罗斯 --> Я люблю тебя\r\n
-	日本 --> あいしてる \r\n 
-	韩语 --> 사랑해 \r\n
-	泰国 --> Ch`an Rak Khun\r\n
-	越南 --> Em ye`u anh \r\n
-	冰岛 --> e`g elska tig\r\n
-	瑞典 --> Jag lskar dig\r\n
-	犹太语 --> Ani ohev otach\r\n
-	匈牙利 --> Szeretlek\r\n
-	希腊语 --> S`agapo\r\n
-	阿拉伯语-->أحبك\r\n
-	立陶宛 --> Tave Myliu\r\n </string>
+
+    <string name="autoCompleteText_lan">
+        汉语 --> 我爱你\r\n
+        英语 --> I love you\r\n
+        法语 --> Je t`aime \r\n
+        德语 --> Ich liebe Dich\r\n
+        芬兰 --> Minarakastan sinua\r\n
+        荷兰 --> IK hou van jou\r\n
+        捷克 --> Miluji te\r\n
+        丹麦 --> Jeg elsker dig\r\n
+        俄罗斯 --> Я люблю тебя\r\n
+        日本 --> あいしてる \r\n
+        韩语 --> 사랑해 \r\n
+        泰国 --> Ch`an Rak Khun\r\n
+        越南 --> Em ye`u anh \r\n
+        冰岛 --> e`g elska tig\r\n
+        瑞典 --> Jag lskar dig\r\n
+        犹太语 --> Ani ohev otach\r\n
+        匈牙利 --> Szeretlek\r\n
+        希腊语 --> S`agapo\r\n
+        阿拉伯语-->أحبك\r\n
+        立陶宛 --> Tave Myliu\r\n </string>
     <!-- printdraw页面 -->
     <string name="checkBox_pic">标签</string>
     <string name="textView3">宽</string>
@@ -161,4 +170,6 @@
     <string name="multiface_crop_help">"触摸一张脸开始裁剪。"</string>
     <string name="runningFaceDetection">"请稍候..."</string>
     <string name="printLoad">文件读取中...</string>
+    <string name="sp">sp</string>
+    <string name="font_size">字体大小:</string>
 </resources>

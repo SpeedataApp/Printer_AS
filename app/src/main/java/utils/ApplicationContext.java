@@ -24,10 +24,17 @@ public class ApplicationContext extends Application {
     private TransferMode printmode = TransferMode.TM_NONE;
     private boolean labelmark = true;
 
+    private static ApplicationContext sInstance;
+
+    public static ApplicationContext getInstance() {
+        return sInstance;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
         Log.d("APP", "onCreate");
+        sInstance = this;
         Context context = getApplicationContext();
         // 获取当前包名
         String packageName = context.getPackageName();

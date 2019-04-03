@@ -43,7 +43,7 @@
                 android:layout_weight="1"
                 android:inputType="number"
                 android:ems="3"
-                android:text="550" />
+                android:text="570" />
 
             <TextView
                 android:id="@+id/textView_lanh"
@@ -56,6 +56,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/rl_first"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5"
@@ -72,6 +73,91 @@
             android:text="@string/autoCompleteText_lan" >
         </AutoCompleteTextView>
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TableRow
+            android:id="@+id/tr_textsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/font_size"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/editText_textsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/editText_text"
+            android:ems="3"
+            android:inputType="number"
+            android:text="12" >
+            <requestFocus />
+        </EditText>
+        <TextView
+            android:id="@+id/textView_textsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/editText_textsize"
+            android:text="@string/sp"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+        <CheckBox
+            android:id="@+id/checkBox03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tr_textsize"
+            android:text="@string/checkBox03"
+            android:textColor="@color/text" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+
+                android:text="@string/radio0"
+                android:textColor="@color/text" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio1"
+                android:textColor="@color/text" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio2"
+                android:textColor="@color/text" />
+        </RadioGroup>
+    </RelativeLayout>
+
 
     <LinearLayout
         android:orientation="horizontal"
