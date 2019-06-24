@@ -3,7 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     buildToolsVersion '28.0.3'
-
+    lintOptions {
+        abortOnError false
+    }
     defaultConfig {
         applicationId "com.speedata.print"
         minSdkVersion 15
@@ -34,7 +36,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.speedata:deivice:1.5'
     implementation 'com.google.firebase:firebase-appindexing:17.1.0'
-    implementation files('libs/regoPrintLibV3.01.03.jar')
+    implementation files('libs/regoPrinterSDKLibV03.02.04.jar')
 
     //引用打印不需要引用下面
     implementation 'com.tencent.bugly:nativecrashreport:3.3.1'
