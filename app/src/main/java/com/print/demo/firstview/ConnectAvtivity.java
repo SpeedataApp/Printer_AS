@@ -58,7 +58,7 @@ public class ConnectAvtivity extends Activity {
 		String xinghao = Build.MODEL;
 		if (xinghao.contains("SK80")) {
 			state = context.getObject().CON_ConnectDevices("RG-E487",
-					"/dev/ttyMT3" + ":" + "115200" + ":1:1", 200);
+					"/dev/ttyMT3:115200:1:1", 200);
 			try {
 				deviceControl = new DeviceControl(DeviceControl.PowerType.MAIN_AND_EXPAND, 85, 0);
 				deviceControl.PowerOnDevice();
