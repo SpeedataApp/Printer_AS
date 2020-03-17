@@ -89,6 +89,7 @@
     <string name="button_movie">Movie Tickets</string>
     <string name="button_fire">Train Tickets </string>
     <string name="button_shopping">Shopping Coupon</string>
+    <string name="button_table">Table</string>
     <!-- lang页面和printdraw,general页面是一样的可以用一个 -->
     <string name="checkBox_lanlab">Label</string>
     <string name="textView_lanw">Width</string>

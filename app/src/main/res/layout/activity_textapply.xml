@@ -26,8 +26,15 @@
         android:id="@+id/Button_shopping"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       
-       
+
+
         android:text="@string/button_shopping" />
+    <Button
+        android:id="@+id/Button_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="printTable"
+
+        android:text="@string/button_table" />
     </LinearLayout>
 
