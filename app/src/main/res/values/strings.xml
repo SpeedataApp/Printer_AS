@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PrintApp1.0.3</string>
+    <string name="app_name">PrintApp1.0.4</string>
     <!-- Toast提示 -->
     <string name="null_wight_hight">Width or height can not be empty</string>
     <string name="null_barversion_barerr_barsize">There are empty, please input</string>

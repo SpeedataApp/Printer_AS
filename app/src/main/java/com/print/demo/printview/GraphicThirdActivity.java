@@ -202,10 +202,10 @@ public class GraphicThirdActivity extends BaseActivity {
                 "仅限当日当次车", 16);
 
         context.getObject().DRAW_PrintText(context.getState(), 135, 340,
-                "123456789012345", 16);
+                "TrainTicket打印汉字", 16);
         context.getObject().DRAW_Print1D2DBarcode(context.getState(),
                 preDefiniation.BarcodeType.BT_QRcode.getValue(), 120, 200, 160, 160,
-                "TrainTicket");
+                "TrainTicket打印汉字");
         context.getObject().CON_PageEnd(context.getState(),
                 context.getPrintway());
     }

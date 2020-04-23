@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">PrintApp1.0.3</string>
+    <string name="app_name">PrintApp1.0.4</string>
 
     <!-- Toast提示 -->
     <string name="null_wight_hight">宽或高不能为空</string>
